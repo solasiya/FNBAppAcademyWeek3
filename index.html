@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Zoo - Home</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Pine City Zoo Logo" id="logo">
+    </div>
+    <div id="tabs-top">
+        <a href="index.html" class="tab active">HOME</a>
+        <a href="map.html" class="tab">MAP</a>
+        <a href="places.html" class="tab">PLACES</a>
+    </div>
+    <div id="main">
+        <div class="hero-section">
+            <h1>Welcome to Pine City Zoo</h1>
+            <p>Discover the wild wonders of nature and create unforgettable memories with over 200 amazing animals from around the world</p>
+            <a href="animals.html" class="cta-button">Meet Our Animals</a>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <h3>200+ Animals</h3>
+                <p>From majestic elephants to playful monkeys, discover incredible wildlife from every continent in naturalistic habitats designed for their comfort and your amazement.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Conservation Focus</h3>
+                <p>We're dedicated to wildlife conservation and education, participating in breeding programs and research to protect endangered species for future generations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Family Fun</h3>
+                <p>Educational programs, feeding experiences, and interactive exhibits make Pine City Zoo the perfect destination for families, school groups, and animal lovers of all ages.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <h3>Special Events This Month</h3>
+            <p>Join us for Zoo Nights every Friday evening, featuring guided tours, animal encounters, and special presentations. Don't miss our weekend keeper talks at 2 PM!</p>
+        </div>
+        
+        <div class="info-section">
+            <h2>Plan Your Visit</h2>
+    <div class="hours-grid">
+        <div class="hours-card">
+            <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+            <p><strong>Summer (Mar-Oct):</strong><br>
+            9:00 AM - 6:00 PM Daily</p>
+            <p><strong>Winter (Nov-Feb):</strong><br>
+            9:00 AM - 4:00 PM Daily</p>
+        </div>
+        
+        <div class="hours-card">
+            <h3><i class="fas fa-ticket-alt"></i> Admission</h3>
+            <p><strong>Adults:</strong> R180<br>
+            <strong>Children (3-12):</strong> R120<br>
+            <strong>Seniors (65+):</strong> R150<br>
+            <strong>Under 3:</strong> Free</p>
+        </div>
+        
+        <div class="hours-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+            <p>01 Wildlife Drive<br>
+            Pine City, Cape Town 7155<br>
+            <strong>Phone:</strong> (011) 123-4567<br>
+            Free parking available</p>
+        </div>
+        
+        <div class="hours-card">
+            <h3><i class="fas fa-star"></i> Highlights</h3>
+            <p>• Daily animal feeding shows<br>
+            • Educational keeper talks<br>
+            • Children's petting zoo<br>
+            • Gift shop & café</p>
+        </div>
+    </div>
+    <div class="info-section">
+        <h2>Featured Animals</h2>
+        <p style="text-align: center; font-size: 1.1em; color: #666; margin-bottom: 30px;">
+            Meet some of our most beloved residents! Each animal has a unique story and plays an important role in our conservation efforts.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+            <div style="padding: 20px;">
+                <div style="font-size: 4em; margin-bottom: 10px;">🐘</div>
+                <h4 style="color: #2d5016;">African Elephants</h4>
+                <p>Visit our gentle giants in their spacious habitat</p>
+            </div>
+            <div style="padding: 20px;">
+                <div style="font-size: 4em; margin-bottom: 10px;">🦒</div>
+                <h4 style="color: #2d5016;">Giraffes</h4>
+                <p>Watch these tall beauties up close from our viewing platform</p>
+            </div>
+            <div style="padding: 20px;">
+                <div style="font-size: 4em; margin-bottom: 10px;">🐼</div>
+                <h4 style="color: #2d5016;">Giant Pandas</h4>
+                <p>Our most popular residents love to play and eat bamboo</p>
+            </div>
+            <div style="padding: 20px;">
+                <div style="font-size: 4em; margin-bottom: 10px;">🦁</div>
+                <h4 style="color: #2d5016;">Lions</h4>
+                <p>Hear the mighty roar of the king of the jungle</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="weather.html" class="tab">WEATHER</a>
+        <a href="feedback.html" class="tab">FEEDBACK</a>
+    </div>
+
+    <script>
+        // Add smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll for feature cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards and info sections
+        document.querySelectorAll('.feature-card, .info-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
